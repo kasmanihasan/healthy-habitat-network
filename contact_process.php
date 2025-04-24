@@ -24,7 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sss", $name, $email, $message);
 
     if ($stmt->execute()) {
-        echo "Message sent successfully!";
+        header("Location: thankyou.html"); // Redirect to thank you page
+        exit;
     } else {
         echo "Error: " . $stmt->error;
     }
