@@ -7,72 +7,87 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<nav class="navbar">
-  <div class="nav-container">
-    <a href="#home" class="logo">Healthy Habitat</a>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#explore">Offerings</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<header class="hero" id="home">
-  <div class="hero-text">
-    <h1>Welcome to Healthy Habitat</h1>
-    <p>Your path to a healthier, eco-friendly lifestyle starts here.</p>
-    <a href="#explore" class="btn">Explore More</a>
-  </div>
-</header>
-
-<section class="features" id="explore">
-  <h2>Our Offerings</h2>
-  <div class="card-container">
-    <div class="card">
-      <img src="images/yoga.jpg" alt="Yoga" />
-      <h3>Eco Yoga Sessions</h3>
-      <p>Join yoga sessions with natural surroundings and eco mats.</p>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">Healthy Habitat</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#explore">Offerings</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-    <div class="card">
-      <img src="images/healthymeal.jpg" alt="Healthy Meal" />
-      <h3>Healthy Meal Plans</h3>
-      <p>Enjoy nutritious, organic meal plans tailored to your lifestyle.</p>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="hero-text">
+      <h1>Welcome to Healthy Habitat</h1>
+      <p>Your path to a healthier, eco-friendly lifestyle starts here.</p>
+      <a href="#explore" class="btn">Explore More</a>
     </div>
-    <div class="card">
-      <img src="images/airpurifier.jpg" alt="Air Purifier" />
-      <h3>Eco-Friendly Products</h3>
-      <p>Breathe clean with our sustainable air purifiers and more.</p>
+  </header>
+
+  <section class="features" id="explore">
+    <h2>Our Offerings</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="images/yoga.jpg" alt="Yoga" />
+        <h3>Eco Yoga Sessions</h3>
+        <p>Join yoga sessions with natural surroundings and eco mats.</p>
+      </div>
+      <div class="card">
+        <img src="images/healthymeal.jpg" alt="Healthy Meal" />
+        <h3>Healthy Meal Plans</h3>
+        <p>Enjoy nutritious, organic meal plans tailored to your lifestyle.</p>
+      </div>
+      <div class="card">
+        <img src="images/airpurifier.jpg" alt="Air Purifier" />
+        <h3>Eco-Friendly Products</h3>
+        <p>Breathe clean with our sustainable air purifiers and more.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="gallery">
-  <h2>Explore the Habitat</h2>
-  <div class="gallery-images">
-    <img src="images/nature.jpg" alt="Nature" />
-    <img src="images/ecoyogamat.jpg" alt="Eco Yoga Mat" />
-    <img src="images/ecohomestuff.jpg" alt="Eco Home Stuff" />
-    <img src="images/eco.jpg" alt="Eco Living" />
-  </div>
-</section>
+  <section class="gallery">
+    <h2>Explore the Habitat</h2>
+    <div class="gallery-images">
+      <img src="images/nature.jpg" alt="Nature" />
+      <img src="images/ecoyogamat.jpg" alt="Eco Yoga Mat" />
+      <img src="images/ecohomestuff.jpg" alt="Eco Home Stuff" />
+      <img src="images/eco.jpg" alt="Eco Living" />
+    </div>
+  </section>
 
-<section class="contact" id="contact">
-  <h2>Contact Us</h2>
-  <div class="contact-info">
-    <img src="images/contactus.jpg" alt="Contact Us" />
-    <form action="process.php" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-</section>
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <img src="images/contactus.jpg" alt="Contact Us" />
+      <form id="contact-form">
+        <input type="text" name="name" id="name" placeholder="Your Name" required />
+        <input type="email" name="email" id="email" placeholder="Your Email" required />
+        <textarea name="message" id="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    <div id="thank-you-message" style="display: none; text-align: center; margin-top: 20px;">
+      <h3>Thank you for contacting us!</h3>
+      <p>Your message has been successfully submitted.</p>
+    </div>
+  </section>
 
-<footer>
-  <p>&copy; 2025 Healthy Habitat. All rights reserved.</p>
-</footer>
+  <footer>
+    <p>&copy; 2025 Healthy Habitat. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript to handle form submission and show thank you message
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form from submitting the usual way
+
+      // Hide the form and show the thank you message
+      document.getElementById('contact-form').style.display = 'none';
+      document.getElementById('thank-you-message').style.display = 'block';
+    });
+  </script>
 </body>
 </html>
