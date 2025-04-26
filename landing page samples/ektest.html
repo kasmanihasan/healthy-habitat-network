@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Healthy Habitat Network Landing Page">
+    <title>Healthy Habitat Network</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Reset some styles */
+        body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic body styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #28a745;
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        /* Slider Section */
+        .slider {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .slider .slides {
+            display: flex;
+            animation: slide 15s infinite;
+        }
+
+        .slider .slide {
+            min-width: 100%;
+            transition: 0.5s;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Cards Section */
+        .cards-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            margin: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .card p {
+            color: #777;
+        }
+
+        /* Footer Section */
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Animation */
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-100%);
+            }
+
+            50% {
+                transform: translateX(-200%);
+            }
+
+            75% {
+                transform: translateX(-300%);
+            }
+
+            100% {
+                transform: translateX(-400%);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cards-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero" data-aos="fade-up" data-aos-duration="1500">
+        <h1>Welcome to Healthy Habitat Network</h1>
+        <p>Join our community for a healthier, more sustainable lifestyle</p>
+        <a href="#signup" class="cta-button">Get Started</a>
+    </div>
+
+    <!-- Infinite Slider Section -->
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="image1.jpg" alt="Image 1"></div>
+            <div class="slide"><img src="image2.jpg" alt="Image 2"></div>
+            <div class="slide"><img src="image3.jpg" alt="Image 3"></div>
+            <div class="slide"><img src="image4.jpg" alt="Image 4"></div>
+        </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="cards-container" data-aos="fade-up" data-aos-duration="1500">
+        <div class="card">
+            <img src="card1.jpg" alt="Card 1">
+            <h3>Nutrition</h3>
+            <p>Learn about healthy eating habits to improve your lifestyle.</p>
+        </div>
+        <div class="card">
+            <img src="card2.jpg" alt="Card 2">
+            <h3>Fitness</h3>
+            <p>Engage in fitness programs to stay healthy and active.</p>
+        </div>
+        <div class="card">
+            <img src="card3.jpg" alt="Card 3">
+            <h3>Mental Well-being</h3>
+            <p>Join mindfulness and meditation sessions to reduce stress.</p>
+        </div>
+    </div>
+
+    <!-- Signup Section -->
+    <div class="container">
+        <h2 id="signup">Sign Up Today</h2>
+        <form action="/submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required><br>
+            <input type="email" name="email" placeholder="Your Email" required><br>
+            <input type="submit" value="Join Now">
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>University of Hertfordshire - Team 23</p>
+        <p>Team Members: Umesh, Joy, Hasan, Hope, Janvi</p>
+    </div>
+
+    <!-- AOS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,57 +8,80 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="#home" class="logo">Healthy Habitat</a>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#explore">Offerings</a></li>
+        <li><a href="#offerings">Offerings</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <header class="hero" id="home">
     <div class="hero-text">
       <h1>Welcome to Healthy Habitat</h1>
-      <p>Your path to a healthier, eco-friendly lifestyle starts here.</p>
-      <a href="#explore" class="btn">Explore More</a>
+      <p>Start your journey towards a healthier, eco-friendly lifestyle.</p>
+      <a href="#offerings" class="btn">Explore More</a>
     </div>
   </header>
 
-  <section class="features" id="explore">
+  <!-- Offerings Section -->
+  <section class="features" id="offerings">
     <h2>Our Offerings</h2>
     <div class="card-container">
       <div class="card">
         <img src="images/yoga.jpg" alt="Yoga" />
         <h3>Eco Yoga Sessions</h3>
-        <p>Join yoga sessions with natural surroundings and eco mats.</p>
+        <p>Connect your mind and body with eco-friendly yoga practices.</p>
       </div>
       <div class="card">
-        <img src="images/healthymeal.jpg" alt="Healthy Meal" />
+        <img src="images/healthymeal.jpg" alt="Healthy Meals" />
         <h3>Healthy Meal Plans</h3>
-        <p>Enjoy nutritious, organic meal plans tailored to your lifestyle.</p>
+        <p>Organic and nutritious meal subscriptions tailored to you.</p>
       </div>
       <div class="card">
         <img src="images/airpurifier.jpg" alt="Air Purifier" />
         <h3>Eco-Friendly Products</h3>
-        <p>Breathe clean with our sustainable air purifiers and more.</p>
+        <p>Clean your air and home naturally with sustainable solutions.</p>
       </div>
     </div>
   </section>
 
-  <section class="gallery">
-    <h2>Explore the Habitat</h2>
-    <div class="gallery-images">
-      <img src="images/nature.jpg" alt="Nature" />
-      <img src="images/ecoyogamat.jpg" alt="Eco Yoga Mat" />
-      <img src="images/ecohomestuff.jpg" alt="Eco Home Stuff" />
-      <img src="images/eco.jpg" alt="Eco Living" />
+  <!-- Voting Section -->
+  <section class="voting-section">
+    <h2>Vote for Your Favorite Offerings</h2>
+    <div class="voting-cards">
+      <div class="voting-card">
+        <h3>Eco Yoga</h3>
+        <button class="vote-btn" onclick="vote('ecoYoga')">Yes</button>
+        <button class="vote-btn" onclick="vote('ecoYoga')">No</button>
+      </div>
+      <div class="voting-card">
+        <h3>Healthy Meal Plans</h3>
+        <button class="vote-btn" onclick="vote('healthyMeal')">Yes</button>
+        <button class="vote-btn" onclick="vote('healthyMeal')">No</button>
+      </div>
     </div>
   </section>
 
+  <!-- Gallery Section -->
+  <section class="gallery" id="gallery">
+    <h2>Explore the Habitat</h2>
+    <div class="gallery-slider">
+      <img src="images/nature.jpg" alt="Nature">
+      <img src="images/ecoyogamat.jpg" alt="Eco Yoga Mat">
+      <img src="images/ecohomestuff.jpg" alt="Eco Home Stuff">
+      <img src="images/eco.jpg" alt="Eco Living">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
   <section class="contact" id="contact">
     <h2>Contact Us</h2>
     <div class="contact-info">
@@ -71,23 +95,16 @@
     </div>
     <div id="thank-you-message" style="display: none; text-align: center; margin-top: 20px;">
       <h3>Thank you for contacting us!</h3>
-      <p>Your message has been successfully submitted.</p>
+      <p>Your message has been submitted successfully.</p>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Healthy Habitat. All rights reserved.</p>
+    <p>University of Hertfordshire | Team 23: Umesh, Joy, Hasan, Hope, Janvi</p>
   </footer>
 
-  <script>
-    // JavaScript to handle form submission and show thank you message
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent form from submitting the usual way
-
-      // Hide the form and show the thank you message
-      document.getElementById('contact-form').style.display = 'none';
-      document.getElementById('thank-you-message').style.display = 'block';
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthy Habitat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="#home" class="logo">Healthy Habitat</a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero" id="home">
+  <div class="hero-text">
+    <h1>Welcome to Healthy Habitat</h1>
+    <p>Connecting you to a healthier, eco-friendly life!</p>
+    <a href="#services" class="btn">Explore More</a>
+  </div>
+</header>
+
+<!-- Services Section -->
+<section class="features" id="services">
+  <h2>Our Services</h2>
+  <div class="card-container">
+    <div class="card">
+      <img src="images/freshfruitveg.jpg" alt="Healthy Eating" />
+      <h3>Healthy Eating Programs</h3>
+      <p>Nutrition counseling and organic meal plans for your goals.</p>
+      <button class="btn book-btn" data-service="Healthy Eating">Book Now</button>
+    </div>
+    <div class="card">
+      <img src="images/natureyogapose.jpeg" alt="Yoga and Wellness" />
+      <h3>Fitness & Wellness</h3>
+      <p>Yoga, meditation, and personal fitness training tailored to you.</p>
+      <button class="btn book-btn" data-service="Fitness & Wellness">Book Now</button>
+    </div>
+    <div class="card">
+      <img src="images/smilingface.jpg" alt="Mental Health" />
+      <h3>Mindfulness & Mental Health</h3>
+      <p>Therapy, workshops, and stress management help for your journey.</p>
+      <button class="btn book-btn" data-service="Mental Health">Book Now</button>
+    </div>
+    <div class="card">
+      <img src="images/sustainablehome.jpg" alt="Sustainable Living" />
+      <h3>Sustainable Living</h3>
+      <p>Eco-friendly cleaning, gardening, and sustainable home ideas.</p>
+      <button class="btn book-btn" data-service="Sustainable Living">Book Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section class="products" id="products">
+  <h2>Our Eco-Friendly Products</h2>
+  <div class="card-container">
+    <div class="card">
+      <img src="images/ecoyogamat.jpg" alt="Eco Yoga Mat" />
+      <h3>Cork Yoga Mats</h3>
+      <p>Natural cork yoga mats for sustainable fitness.</p>
+      <button class="btn cart-btn" data-product="Cork Yoga Mat">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="images/bamboofacecloth.jpg" alt="Bamboo Face Cloth" />
+      <h3>Bamboo Face Cloth</h3>
+      <p>Soft, sustainable cloths for eco skincare.</p>
+      <button class="btn cart-btn" data-product="Bamboo Face Cloth">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="images/organicbedding.jpg" alt="Organic Bedding" />
+      <h3>Organic Bedding</h3>
+      <p>Eco-friendly, cozy bedding options.</p>
+      <button class="btn cart-btn" data-product="Organic Bedding">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="images/airpurifier.jpg" alt="Air Purifier" />
+      <h3>Eco Air Purifiers</h3>
+      <p>Purify your home the sustainable way.</p>
+      <button class="btn cart-btn" data-product="Eco Air Purifier">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- Voting Section -->
+<section class="voting-section">
+  <h2>Vote for Your Favorite Service!</h2>
+  <div class="voting-cards">
+    <div class="voting-card">
+      <h3>Yoga Sessions</h3>
+      <button class="vote-btn" onclick="vote('Yoga')">Yes</button>
+      <button class="vote-btn" onclick="vote('Yoga')">No</button>
+    </div>
+    <div class="voting-card">
+      <h3>Healthy Meal Plans</h3>
+      <button class="vote-btn" onclick="vote('Meals')">Yes</button>
+      <button class="vote-btn" onclick="vote('Meals')">No</button>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section class="gallery" id="gallery">
+  <h2>Explore the Habitat</h2>
+  <div class="gallery-slider">
+    <img src="images/welcometohealthyhabitat.jpg" alt="Welcome">
+    <img src="images/cartoonstretch.jpg" alt="Stretching Cartoon">
+    <img src="images/kidholdplant.jpg" alt="Kid Holding Plant">
+    <img src="images/womanplanting.jpg" alt="Woman Planting">
+    <img src="images/ecohomeitem.jpg" alt="Eco Home Items">
+    <img src="images/organicbedding.jpg" alt="Organic Bedding">
+    <img src="images/bamboofacecloth.jpg" alt="Bamboo Face Cloth">
+    <img src="images/natureyogapose.jpeg" alt="Yoga Pose">
+    <img src="images/freshfruitveg.jpg" alt="Fruits and Veggies">
+    <img src="images/airpurifier.jpg" alt="Air Purifier">
+    <img src="images/eco.jpg" alt="Eco Living">
+    <img src="images/healthymeal.jpg" alt="Healthy Meal">
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials" id="testimonials">
+  <h2>What People Are Saying</h2>
+  <div class="testimonial-slider">
+    <div class="testimonial">
+      <p>"Healthy Habitat helped me reconnect with nature."</p>
+      <h4>- Alex P.</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Their organic products and yoga classes are top-notch."</p>
+      <h4>- Mia S.</h4>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-info">
+    <img src="images/contactus.jpg" alt="Contact Us" />
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+  <div id="thank-you-message" style="display: none; text-align: center; margin-top: 20px;">
+    <h3>Thank you for contacting us!</h3>
+    <p>Your message has been submitted successfully.</p>
+  </div>
+</section>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="close-modal" class="close-btn">&times;</span>
+    <h2 id="modal-title">Booking / Cart</h2>
+    <p id="modal-description"></p>
+    <button class="btn" id="confirm-btn">Confirm</button>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Healthy Habitat. All rights reserved.</p>
+  <p>University of Hertfordshire | Team 23: Umesh, Joy, Hasan, Hope, Janvi</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
