@@ -1,0 +1,25 @@
+<?php
+// Fetch products from the database
+include('db.php');
+$sql = "SELECT * FROM products";
+$result = $conn->query($sql);
+?>
+
+<form action="vote.php" method="POST">
+    <label for="product_id">Choose Product:</label>
+    <select name="product_id" id="product_id" required>
+        <?php
+            while ($row = $result->fetch_assoc()) {
+                echo "<option value='" . $row['id'] . "'>" . $row['product_name'] . "</option>";
+            }
+        ?>
+    </select><br>
+
+    <label for="vote">Vote (Yes/No):</label>
+    <select name="vote" id="vote" required>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+    </select><br>
+
+    <input type="submit" value="Submit Vote">
+</form>

@@ -1,0 +1,17 @@
+<form action="vote.php" method="POST">
+   <label for="product_id">Choose Product:</label>
+   <select id="product_id" name="product_id" required>
+      <!-- These options would come from the database in a real implementation -->
+      <option value="1">Product 1</option>
+      <option value="2">Product 2</option>
+      <option value="3">Product 3</option>
+   </select>
+
+   <label for="vote">Vote:</label>
+   <select id="vote" name="vote" required>
+      <option value="1">Yes</option>
+      <option value="0">No</option>
+   </select>
+
+   <input type="submit" value="Submit Vote">
+</form>

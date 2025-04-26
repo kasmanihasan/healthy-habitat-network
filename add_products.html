@@ -1,0 +1,19 @@
+<form action="add_product.php" method="POST">
+   <label for="product_name">Product Name:</label>
+   <input type="text" id="product_name" name="product_name" required>
+   
+   <label for="product_description">Product Description:</label>
+   <textarea id="product_description" name="product_description" required></textarea>
+   
+   <label for="price">Price:</label>
+   <input type="number" id="price" name="price" required>
+
+   <label for="category">Category:</label>
+   <select id="category" name="category" required>
+      <option value="health">Health</option>
+      <option value="fitness">Fitness</option>
+      <option value="sustainability">Sustainability</option>
+   </select>
+
+   <input type="submit" value="Add Product">
+</form>
